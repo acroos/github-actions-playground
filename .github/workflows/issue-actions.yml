@@ -9,7 +9,6 @@ on:
 jobs:
   print_issue:
     name: Print Issue
-    runs-on: ubuntu-latest
     steps:
       - name: Print Issue Number
-        run: echo "Issue Number: ${{ github.event.issue.number }}"
+        run: echo "Issue Number: ${{ github.event.action }}"
