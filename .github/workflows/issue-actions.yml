@@ -9,4 +9,4 @@ jobs:
   print_issue:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Hi ${{ github.event.label }}'
+      - run: echo 'Hi ${{ github.event.label.name }}'
