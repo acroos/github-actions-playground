@@ -14,5 +14,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.2
+          ruby-version-constraint: "~>"
       - name: Print parsed issue
         run: ruby ./scripts/print-issue.rb '${{ github.event.issue.body }}'
