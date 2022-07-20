@@ -7,8 +7,9 @@ on:
 
 jobs:
   print_issue:
+    name: Print Issue
     runs-on: ubuntu-latest
     if: ${{ github.event.label.name == 'printme' }}
     steps:
-      - name: Print issue number
-        run: echo 'Hi ${{ github.event.issue.number }}'
+      - name: Print issue body
+        run: echo '${{ github.event.issue.body }}'
