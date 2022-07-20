@@ -11,11 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.label.name == 'printme' }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1.2
           ruby-version-constraint: "~>"
-      - name: Print parsed issue
-        run: ruby ./scripts/print-issue.rb '${{ github.event.issue.body }}'
+      - name: Add user
+        run: ruby ./scripts/add-user.rb '${{ github.event.issue.body }}'
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          add-paths: './test.json'
+          branch: 'grant-access-${{ job.run.id }}'
+          title: 'Grant Access [${{ github.event.issue.title }}]'
+          reviewers: 'acroos'
+          assignees: '${{ github.event.issue.user.login }}'
