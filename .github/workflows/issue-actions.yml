@@ -16,7 +16,6 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1.2
-          ruby-version-constraint: "~>"
       - name: Add user
         run: ruby ./scripts/add-user.rb '${{ github.event.issue.body }}'
       - name: Create Pull Request

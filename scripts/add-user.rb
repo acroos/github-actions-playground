@@ -1,3 +1,4 @@
+require 'json'
 require 'yaml'
 
 def parse_issue(issue_body)
