@@ -3,11 +3,10 @@ name: Issue Actions
 on:
   issues:
     types:
-      - opened
       - labeled
 
 jobs:
   print_issue:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Hi ${{ github.event_name }}'
+      - run: echo 'Hi ${{ github.event.label }}'
