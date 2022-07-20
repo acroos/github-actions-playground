@@ -2,7 +2,7 @@
 name: Access Request
 about: Request Access
 title: Access Request
-labels: printme
+labels: access-request
 assignees: ''
 
 ---
