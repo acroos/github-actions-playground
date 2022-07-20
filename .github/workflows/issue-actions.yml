@@ -22,7 +22,7 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           add-paths: './test.json'
-          branch: 'grant-access-${{ job.run.id }}'
-          title: 'Grant Access [${{ github.event.issue.title }}]'
+          branch: 'grant-access-${{ github.job }}'
+          title: 'Grant Access to ${{ github.event.issue.user.name }}'
           reviewers: 'acroos'
           assignees: '${{ github.event.issue.user.login }}'
