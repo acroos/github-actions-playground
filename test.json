@@ -3,6 +3,10 @@
     {
       "email": "test.email@mail.com",
       "role": "admin"
+    },
+    {
+      "email": "roos.austin@gmail.com",
+      "role": "admin"
     }
   ]
 }
