@@ -9,7 +9,7 @@ jobs:
   print_issue:
     name: Print Issue
     runs-on: ubuntu-latest
-    if: ${{ github.event.label.name == 'printme' }}
+    if: ${{ github.event.label.name == 'access-request' }}
     steps:
       - uses: actions/checkout@v3
       - name: Set up Ruby

@@ -1,7 +1,7 @@
 ---
-name: Access Request for <NAME>
+name: Access Request
 about: Request access to the tool for yourself!
-title: Access Request
+title: Access Request for <NAME>
 labels: access-request
 assignees: ''
 
