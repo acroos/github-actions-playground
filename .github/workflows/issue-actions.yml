@@ -11,5 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.label.name == 'printme' }}
     steps:
-      - name: Print issue body
-        run: echo '${{ github.event.issue.body }}'
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+      - name: Print parsed issue
+        run: ruby ./scripts/print-issue.rb '${{ github.event.issue.body }}'
