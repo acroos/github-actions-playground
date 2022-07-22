@@ -18,6 +18,7 @@ rescue => e
   raise
 end
 
-issue_content = parse_issue(ARGV[0])
-update_test_json(issue_content)
-puts 'done.'
+puts ARGV[0]
+# issue_content = parse_issue(ARGV[0])
+# update_test_json(issue_content)
+# puts 'done.'
